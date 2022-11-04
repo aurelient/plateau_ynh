@@ -26,9 +26,7 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx",
-        "php7.4-fpm",
-        "mysql"
+        "nginx"
     ],
     "arguments": {
         "install": [
@@ -39,8 +37,8 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/example",
-                "default": "/example"
+                "example": "/plateau",
+                "default": "/plateau"
             },
             {
                 "name": "is_public",
