@@ -240,7 +240,7 @@ ynh_script_progression --message="Adding a configuration file..." --weight=1
 # INSTALL PLATEAU
 #=================================================
 ynh_script_progression --message="Installing Plateau..." --weight=3
-ynh_exec_warn_less npm install
+ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
 
 #=================================================
 # GENERIC FINALIZATION
