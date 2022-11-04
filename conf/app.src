@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://github.com/l-atelier-des-chercheurs/PLATEAU/archive/refs/tags/v1.2.1.tar.gz
+SOURCE_SUM=sha256checksum
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+SOURCE_FILENAME=plateau
 SOURCE_EXTRACT=true

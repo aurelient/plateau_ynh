@@ -38,7 +38,7 @@
                 "name": "path",
                 "type": "path",
                 "example": "/plateau",
-                "default": "/plateau"
+                "default": "/"
             },
             {
                 "name": "is_public",
