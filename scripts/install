@@ -105,7 +105,6 @@ ynh_script_progression --message="Installing dependencies..." --weight=1
 ###		- Remove the variable "pkg_dependencies" in _common.sh
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
-pkg_dependencies="libxtst6 libxss1 gconf-gsettings-backend libpangocairo-1.0-0 libnss3 libnss3-tools"
 ynh_install_app_dependencies $pkg_dependencies
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
