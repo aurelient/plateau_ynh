@@ -1,5 +1,5 @@
 SOURCE_URL=https://github.com/l-atelier-des-chercheurs/PLATEAU/archive/refs/tags/v1.2.1.tar.gz
-SOURCE_SUM=sha256checksum
+SOURCE_SUM=110c489c940913945996bb58936e199bdf7950dbfc9b46604b3f9c105357fd76
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
