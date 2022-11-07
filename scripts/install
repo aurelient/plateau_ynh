@@ -105,7 +105,7 @@ ynh_script_progression --message="Installing dependencies..." --weight=1
 ###		- Remove the variable "pkg_dependencies" in _common.sh
 ###		- As well as the section "REINSTALL DEPENDENCIES" in the restore script
 ###		- And the section "UPGRADE DEPENDENCIES" in the upgrade script
-ynh_install_app_dependencies $pkg_dependencies
+#ynh_install_app_dependencies $pkg_dependencies
 
 ynh_install_nodejs --nodejs_version=$nodejs_version
 ynh_use_nodejs
@@ -188,7 +188,7 @@ chown -R $app:www-data "$datadir"
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
-ynh_script_progression --message="Adding a configuration file..." --weight=1
+#ynh_script_progression --message="Adding a configuration file..." --weight=1
 
 ### You can add specific configuration files.
 ###
@@ -240,7 +240,8 @@ ynh_script_progression --message="Adding a configuration file..." --weight=1
 # INSTALL PLATEAU
 #=================================================
 ynh_script_progression --message="Installing Plateau..." --weight=3
-ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+#ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
+ynh_npm install
 
 #=================================================
 # GENERIC FINALIZATION
