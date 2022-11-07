@@ -211,7 +211,7 @@ ynh_script_progression --message="Installing Plateau..." --weight=3
 cd $final_path
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
 ls -al $final_path
-cd $final_path/public
+cd $final_path/build
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
 #cd $final_path
 #ynh_npm install
