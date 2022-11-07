@@ -212,8 +212,11 @@ cd $final_path
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
 cd $final_path/build
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
-#cd $final_path
-#ynh_npm install
+cd ..
+ynh_exec_warn_less ynh_exec_as $app $ynh_npm i -g pm2
+pm2 startup systemd -u $app --hp /home/yunohost.app/$app
+pm2 start index.js
+pm2 save
 
 #=================================================
 # GENERIC FINALIZATION
