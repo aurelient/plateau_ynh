@@ -208,9 +208,9 @@ chown -R $app:www-data "$datadir"
 # INSTALL PLATEAU
 #=================================================
 ynh_script_progression --message="Installing Plateau..." --weight=3
-#ynh_exec_warn_less ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install
-ls $final_path
-ynh_npm install $final_path
+ynh_exec_warn_less ynh_exec_as $app $final_path $ynh_npm install
+#cd $final_path
+#ynh_npm install
 
 #=================================================
 # GENERIC FINALIZATION
