@@ -188,7 +188,7 @@ chown -R $app:www-data "$datadir"
 #=================================================
 # SETUP SYSTEMD
 #=================================================
-#ynh_script_progression --message="Configuring a systemd service..." --weight=1
+ynh_script_progression --message="Configuring a systemd service..." --weight=1
 
 ### `ynh_systemd_config` is used to configure a systemd script for an app.
 ### It can be used for apps that use sysvinit (with adaptation) or systemd.
@@ -202,7 +202,7 @@ chown -R $app:www-data "$datadir"
 ###		- And the section "SETUP SYSTEMD" in the upgrade script
 
 # Create a dedicated systemd config
-#ynh_add_systemd_config
+ynh_add_systemd_config
 
 #=================================================
 # INSTALL PLATEAU
@@ -210,14 +210,6 @@ chown -R $app:www-data "$datadir"
 ynh_script_progression --message="Installing Plateau..." --weight=3
 cd $final_path
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
-
-#=================================================
-# INSTALL PM2 to run PLATEAU
-#=================================================
-ynh_exec_warn_less ynh_exec_as $app $ynh_npm install pm2
-pm2 startup systemd -u $app --hp /home/yunohost.app/$app
-pm2 start index.js
-pm2 save
 
 #=================================================
 # GENERIC FINALIZATION
@@ -272,7 +264,7 @@ yunohost service add $app --description="A short description of the app" --log="
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-#ynh_script_progression --message="Starting a systemd service..." --weight=1
+ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 ### `ynh_systemd_action` is used to start a systemd service for an app.
 ### Only needed if you have configure a systemd service
@@ -283,7 +275,7 @@ yunohost service add $app --description="A short description of the app" --log="
 ###		- And the section "STOP SYSTEMD SERVICE" and "START SYSTEMD SERVICE" in the change_url script
 
 # Start a systemd service
-#ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # SETUP FAIL2BAN
