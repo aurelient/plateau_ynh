@@ -210,6 +210,7 @@ chown -R $app:www-data "$datadir"
 ynh_script_progression --message="Installing Plateau..." --weight=3
 cd $final_path
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
+ls -al $final_path
 cd $final_path/public
 ynh_exec_warn_less ynh_exec_as $app $ynh_npm install
 #cd $final_path
