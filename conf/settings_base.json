@@ -1,0 +1,199 @@
+{
+    "protocol": "http",
+    "host": "localhost",
+    "desired_port": 8080,
+    "redirect_port": "",
+    "userDirname": "plateau",
+    "cache_content": true,
+  
+    "contentDirname": "user",
+    "cacheDirname": "plateau_cache",
+    "metaFileext": ".txt",
+    "thumbExt": ".jpeg",
+    "thumbFormat": "jpeg",
+    "folderMetaFilename": "meta",
+    "folderPreviewFilename": "meta_preview",
+  
+    "privateKeyPath": "",
+    "certificatePath": "",
+  
+    "metaDateFormat": "YYYYMMDD_HHmmss",
+    "textEncoding": "UTF-8",
+    "thumbFolderName": "_thumbs",
+    "deletedFolderName": "_bin",
+  
+    "mediaThumbQuality": 70,
+    "maxFileSizeForUpload": 100,
+  
+    "regexpMatchFolderNames": "^([^.]+)$",
+    "regexpGetFileExtension": "\\.[^.]*$",
+    "regexpRemoveFileExtension": "(.+?)(\\.[^.]*$|$)",
+  
+    "api": {
+      "enabled": false,
+      "allow_all_domains": false,
+      "domains_whitelist": []
+    },
+  
+    "structure": {
+      "projects": {
+        "path": "",
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "date_created": {
+            "type": "date",
+            "default": "current",
+            "read_only": true
+          },
+          "date_modified": {
+            "type": "date",
+            "default": "current"
+          },
+          "password": {
+            "type": "string",
+            "read_only": true
+          },
+          "authors": {
+            "type": "array"
+          },
+          "planning_slugs_in_order": {
+            "type": "array"
+          },
+          "countdown_options": {
+            "type": "array"
+          }
+        },
+        "medias": {
+          "thumbs": {
+            "resolutions": [180, 360, 800, 1600]
+          },
+          "fields": {
+            "name": {
+              "type": "string"
+            },
+            "date_created": {
+              "type": "date",
+              "default": "current",
+              "read_only": true
+            },
+            "date_modified": {
+              "type": "date",
+              "default": "current",
+              "override": true
+            },
+            "date_uploaded": {
+              "type": "date",
+              "default": "current",
+              "read_only": true
+            },
+            "media_filename": {
+              "type": "string"
+            },
+            "original_media_filename": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "options": [
+                "image",
+                "video",
+                "audio",
+                "text",
+                "writeup",
+                "planning",
+                "composition",
+                "document",
+                "other"
+              ],
+              "default": "other"
+            },
+            "ratio": {
+              "type": "number"
+            },
+            "duration": {
+              "type": "number"
+            },
+            "authors": {
+              "type": "array"
+            },
+            "caption": {
+              "type": "string"
+            },
+            "planning_info_start": {
+              "type": "date"
+            },
+            "planning_info_end": {
+              "type": "date"
+            },
+            "planning_info_duration": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "authors": {
+        "path": "_authors",
+        "preview": {
+          "width": 1200,
+          "height": 1200,
+          "thumbs": {
+            "resolutions": [180, 640]
+          }
+        },
+        "fields": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "stopmotions": {
+        "path": "_stopmotions",
+        "fields": {
+          "date_created": {
+            "type": "date",
+            "default": "current",
+            "read_only": true
+          },
+          "date_modified": {
+            "type": "date",
+            "default": "current"
+          },
+          "authors": {
+            "type": "array"
+          },
+          "linked_project": {
+            "type": "string"
+          }
+        },
+        "medias": {
+          "thumbs": {
+            "resolutions": [150, 1200]
+          },
+          "fields": {
+            "date_uploaded": {
+              "type": "date",
+              "default": "current",
+              "read_only": true
+            },
+            "media_filename": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "options": ["image"],
+              "default": "other"
+            },
+            "authors": {
+              "type": "array"
+            }
+          }
+        }
+      }
+    }
+  }
+  
