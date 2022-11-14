@@ -1,6 +1,6 @@
 {
   "protocol": "http",
-  "host": "localhost",
+  "host": "127.0.0.1",
   "desired_port": 8080,
   "redirect_port": "",
   "cache_content": true,
