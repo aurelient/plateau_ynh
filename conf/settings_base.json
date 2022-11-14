@@ -8,7 +8,7 @@
   "versioning": true,
 
   "cacheDirname": "plateau_cache",
-  "contentPath": "plateau",
+  "contentPath": "/home/yunohost.app/plateau",
 
   "privateKeyPath": "",
   "certificatePath": "",
